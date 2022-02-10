@@ -5,15 +5,20 @@
              xmlns:views="clr-namespace:Todo_AvaloniaMVVM.Views"
              mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="500"
              x:Class="Todo_AvaloniaMVVM.Views.TodoListView">
+    
     <DockPanel Margin="10">
         <Button Content="Add new TODO" 
                 DockPanel.Dock="Bottom" 
                 HorizontalAlignment="Stretch"
                 HorizontalContentAlignment="Center"/>
-        <StackPanel Name="TodoItems">
-            <CheckBox Content="Todo 1" />
-            <CheckBox Content="Todo 2" />
-            <CheckBox Content="Todo 3" IsChecked="True" />
-        </StackPanel>
+        <ItemsControl Items="{Binding Items}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox Margin="4"
+                              IsChecked="{Binding IsChecked}"
+                              Content="{Binding Description}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </DockPanel>
 </UserControl>

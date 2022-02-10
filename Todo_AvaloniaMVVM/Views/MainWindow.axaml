@@ -9,6 +9,6 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="TodoList"
         Width="300"
-        Height="500">
-    <views:TodoListView />
+        Height="500"
+        Content="{Binding List}">
 </Window>
