@@ -2,13 +2,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:system="clr-namespace:System;assembly=System.Runtime"
              mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="500"
              x:Class="Todo_AvaloniaMVVM.Views.AddTodoItemView">
     <DockPanel>
         <Button DockPanel.Dock="Bottom" Content="Cancel" Command="{Binding Cancel}" />
         <Button DockPanel.Dock="Bottom" Content="OK" Command="{Binding Ok}"/>
+        <DatePicker DockPanel.Dock="Bottom" SelectedDate="{x:Static system:DateTimeOffset.Now}"/>
         <TextBox Text="{Binding Description}"
                  AcceptsReturn="True"
-                 Watermark="Enter your TODO" />
+                 Watermark="TODO..." />
     </DockPanel>
 </UserControl>

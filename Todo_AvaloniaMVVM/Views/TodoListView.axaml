@@ -5,16 +5,24 @@
              xmlns:views="clr-namespace:Todo_AvaloniaMVVM.Views"
              mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="500"
              x:Class="Todo_AvaloniaMVVM.Views.TodoListView">
-    
+
     <DockPanel Margin="10">
-        <Button Content="Add new TODO" 
+        <Button Content="Add new TODO"
                 DockPanel.Dock="Bottom"
-                Command="{Binding $parent[Window].DataContext.AddItem}"/>
+                Command="{Binding $parent[Window].DataContext.AddItem}" />
         <ItemsControl Items="{Binding Items}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <CheckBox IsChecked="{Binding IsChecked}"
-                              Content="{Binding Description}"/>
+                    <DockPanel>
+                        <TextBlock DockPanel.Dock="Right"
+                                   Text="{Binding DueDate, 
+                                   StringFormat={}due {0:dd/MM/yyyy}}" />
+                        
+                        <CheckBox IsChecked="{Binding IsChecked}">
+                            <TextBlock Text="{Binding Description}"
+                                       TextWrapping="Wrap" />
+                        </CheckBox>
+                    </DockPanel>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
