@@ -8,14 +8,12 @@
     
     <DockPanel Margin="10">
         <Button Content="Add new TODO" 
-                DockPanel.Dock="Bottom" 
-                HorizontalAlignment="Stretch"
-                HorizontalContentAlignment="Center"/>
+                DockPanel.Dock="Bottom"
+                Command="{Binding $parent[Window].DataContext.AddItem}"/>
         <ItemsControl Items="{Binding Items}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <CheckBox Margin="4"
-                              IsChecked="{Binding IsChecked}"
+                    <CheckBox IsChecked="{Binding IsChecked}"
                               Content="{Binding Description}"/>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>

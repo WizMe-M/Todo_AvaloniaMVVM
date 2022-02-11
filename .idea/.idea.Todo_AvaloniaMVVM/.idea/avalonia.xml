@@ -4,6 +4,8 @@
     <option name="projectPerEditor">
       <map>
         <entry key="Todo_AvaloniaMVVM/App.axaml" value="Todo_AvaloniaMVVM/Todo_AvaloniaMVVM.csproj" />
+        <entry key="Todo_AvaloniaMVVM/Views/AddTodoItem.axaml" value="Todo_AvaloniaMVVM/Todo_AvaloniaMVVM.csproj" />
+        <entry key="Todo_AvaloniaMVVM/Views/AddTodoItemView.axaml" value="Todo_AvaloniaMVVM/Todo_AvaloniaMVVM.csproj" />
         <entry key="Todo_AvaloniaMVVM/Views/MainWindow.axaml" value="Todo_AvaloniaMVVM/Todo_AvaloniaMVVM.csproj" />
         <entry key="Todo_AvaloniaMVVM/Views/TodoListView.axaml" value="Todo_AvaloniaMVVM/Todo_AvaloniaMVVM.csproj" />
       </map>

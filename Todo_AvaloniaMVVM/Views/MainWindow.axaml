@@ -10,5 +10,4 @@
         Title="TodoList"
         Width="300"
         Height="500"
-        Content="{Binding List}">
-</Window>
+        Content="{Binding Content}" />
